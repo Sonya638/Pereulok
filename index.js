@@ -1,5 +1,7 @@
 const express = require('express');
+const crypto = require('crypto');
 const con = require('./config');
+const res = require('express/lib/response');
 const app = express();
 app.use(express.urlencoded({extended: true}));
 app.listen(3000);
@@ -46,3 +48,37 @@ product(name,price,description,img)
              })
 });
 
+
+
+
+
+app.post('/login' , (req , res)=>{ 
+             let user = req.body; 
+         con.query(`SELECT id, login, password FROM user WHERE login = '${user.login}'`, 
+             (error, result) => { 
+                 if (error)  
+                     res.send('DataBase ErroR ' + error); 
+                 else 
+                 if(result.length > 0){ 
+                     if (result[0].password == user.password) { 
+                         auth(result[0].id,res); 
+                     } 
+                     else res.send("Wrong Pass");  
+                 } 
+                 else res.send("Wrong Login");                 
+         }) 
+         }); 
+          
+          
+         function auth(id,res) { 
+             let token = generateToken(); 
+             con.query(`UPDATE user SET token = '${token}' WHERE id = ${id}`,  
+             (error, result) =>{ 
+                 if(error) res.send(error); 
+                 else res.send(token); 
+             }); 
+         } 
+          
+         function generateToken() { 
+             return crypto.randomBytes(64).toString('hex'); 
+         };
