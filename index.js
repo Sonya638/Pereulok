@@ -57,15 +57,15 @@ app.post('/login' , (req , res)=>{
          con.query(`SELECT id, login, password FROM user WHERE login = '${user.login}'`, 
              (error, result) => { 
                  if (error)  
-                     res.send('DataBase ErroR ' + error); 
+                 res.status(500).send('DataBase ErroR ' + error); 
                  else 
                  if(result.length > 0){ 
                      if (result[0].password == user.password) { 
                          auth(result[0].id,res); 
                      } 
-                     else res.send("Wrong Pass");  
+                     else res.status(401).send("Wrong Pass");  
                  } 
-                 else res.send("Wrong Login");                 
+                 else res.status(401).send("Wrong Login");                 
          }) 
          }); 
           
@@ -74,8 +74,8 @@ app.post('/login' , (req , res)=>{
              let token = generateToken(); 
              con.query(`UPDATE user SET token = '${token}' WHERE id = ${id}`,  
              (error, result) =>{ 
-                 if(error) res.send(error); 
-                 else res.send(token); 
+                 if(error) res.status(500).send(error); 
+                 else res.status(200).send(token); 
              }); 
          } 
           
