@@ -1,12 +1,5 @@
-/* GLOBAL STYLES
--------------------------------------------------- */
-/* Padding below the footer and lighter body text */
 
-body {
-  padding-top: 3rem;
-  padding-bottom: 3rem;
-  color: #5a5a5a;
-}
+
 
 
 /* CUSTOMIZE THE CAROUSEL
@@ -97,23 +90,9 @@ body {
   grid-template-columns: 1fr 1fr 1fr;
 }
 
+.nav-item{
+  
+}
 
 
 
-
-
-/* .link{
-  display: flex;
-  justify-content: end;
-  align-items: flex-end;
-  align-content: flex-end;
-  justify-items: end;
-} */
-
-/* .navbar{
-  display: flex;
-  justify-content: start;
-  justify-items: start;
-  align-content: flex-start;
-  align-items: flex-start;
-} */
