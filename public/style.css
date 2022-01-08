@@ -1,5 +1,24 @@
+main{
+  
+    height:auto !important;
+    height:100%;
+    background: #f0f9ff;
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#f0f9ff), color-stop(100%,#212122));
+    background: -webkit-linear-gradient(top,  #f0f9ff 0%,#212122 100%);
+    background: -moz-linear-gradient(top,  #f0f9ff 0%, #212122 100%);
+    background: -ms-linear-gradient(top,  #f0f9ff 0%,#212122 100%);
+    background: -o-linear-gradient(top,  #f0f9ff 0%,#212122 100%);
+    background: linear-gradient(to bottom,  #f0f9ff 0%,#212122 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f0f9ff', endColorstr='#6996d3',GradientType=0 );
 
+}
 
+.nav-link{
+  color: white;
+};
+.nav-item{
+  color: white;
+}
 
 
 /* CUSTOMIZE THE CAROUSEL
@@ -8,6 +27,9 @@
 /* Carousel base class */
 .carousel {
   margin-bottom: 4rem;
+  margin-left: 50px;
+  margin-right: 50px;
+  margin-top: 20px;
 }
 /* Since positioning the image, we need to help out the caption */
 .carousel-caption {
@@ -17,14 +39,14 @@
 
 /* Declare heights because of positioning of img element */
 .carousel-item {
-  height: 32rem;
+  height: 45em;
 }
 .carousel-item > img {
   position: absolute;
   top: 0;
   left: 0;
   min-width: 100%;
-  height: 32rem;
+  height: 48rem;
 }
 
 
@@ -35,6 +57,7 @@
 .marketing .col-lg-4 {
   margin-bottom: 1.5rem;
   text-align: center;
+  
 }
 .marketing h2 {
   font-weight: 400;
@@ -89,10 +112,5 @@
   display: flex;
   grid-template-columns: 1fr 1fr 1fr;
 }
-
-.nav-item{
-  
-}
-
 
 
