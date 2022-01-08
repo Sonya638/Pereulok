@@ -1,3 +1,4 @@
+
 let shopGrid = document.getElementById('shop_grid'); 
  
 let xhr = new XMLHttpRequest(); 
@@ -5,8 +6,11 @@ let xhr = new XMLHttpRequest();
 xhr.open('GET','/product'); 
 xhr.responseType = 'json'; 
  
-xhr.onload = () => { 
-    shopGrid.innerHTML = ''; 
+xhr.onload = () => {     
+    shopGrid.innerHTML = '';
+    if(xhr.response.status=='401'){
+        shopGrid.innerHTML = response;
+    } 
     xhr.response.forEach((product)=>{ 
         shopGrid.innerHTML += ` 
             <div class="product"> 

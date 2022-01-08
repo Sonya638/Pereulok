@@ -1,11 +1,13 @@
+
 const express = require('express');
+const cookieParser = require('cookie-parser');
 const crypto = require('crypto');
 const con = require('./config');
 const res = require('express/lib/response');
 const app = express();
 app.use(express.urlencoded({extended: true}));
 app.listen(3000);
-
+app.use(cookieParser());
 app.use(express.static(__dirname + '/public'));
 
 app.get('/user',(req,res)=>{
@@ -31,11 +33,21 @@ con.query(`INSERT INTO
 
 
 app.get('/product',(req,res)=>{
-             con.query('SELECT * FROM product', (e,result)=>{
-                          if(e) res.send('DB ERROR');
-                          else res.send(JSON.stringify(result));
-             });
-             });
+    if(req.cookies.token){
+        let token = req.cookies.token;
+        con.query(`SELECT * FROM user WHERE token = '${token}'`,(e,result))
+        if(e) res.send(e);
+        else if(result.length > 0){
+            con.query('SELECT * FROM product', (e,result)=>{
+            if(e) res.send('DB ERROR');
+            else res.send(JSON.stringify(result));
+            });
+        }
+        else{
+            res.status(401).send('Error 401 Login Please');
+        }
+    }
+});
              
 app.post('/product',(req,res)=>{
              let product = req.body;
@@ -82,3 +94,8 @@ app.post('/login' , (req , res)=>{
          function generateToken() { 
              return crypto.randomBytes(64).toString('hex'); 
          };
+
+        app.get('/logout',(req,res)=>{
+            res.clearCookie('token');
+            res.redirect('index.html');
+        })
