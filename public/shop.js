@@ -18,6 +18,7 @@ xhr.onload = () => {
                 <img width="200px" src="${product.img}"> 
                 <p>Description: ${product.description}</p> 
                 <p><b>Price: ${product.price}</b></p> 
+                <p><a href="/cart?id=${product.id}">Buy</a></p>
             </div> 
         ` 
     });  

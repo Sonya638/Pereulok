@@ -99,3 +99,20 @@ app.post('/login' , (req , res)=>{
             res.clearCookie('token');
             res.redirect('index.html');
         })
+        
+        app.get('/cart',(req,res)=>{
+            let id = req.query.id;
+            let token = req.cookies.token;
+            con.query(`SELECT id FROM user WHERE token = '${token}'`,(e,result)=>{
+                if(e) res.send(e);
+                if(result){
+                    con.query(`SELECT * FROM cart WHERE user_id ='${user.id}'`,(e,result)=>{
+                        if(e) res.send(e);
+                        if(result){
+                            console.log(id);
+                           /*  con.query('INSERT INTO cart_product(cart_id,product_id) VALUES ') */
+                        }
+                    })
+                }
+            })
+        })
