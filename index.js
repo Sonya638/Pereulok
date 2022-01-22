@@ -23,8 +23,14 @@ con.query(`INSERT INTO
  user(login,password,balance)
  VALUES('${user.login}','${user.password}',0)`,
  (e,result) => {
-              if(e) res.send('DB ERROR');
-              else res.send('SUCCESS');
+              if(e) res.send(e);
+              else {
+                  let userId = result.insertId;
+                  con.query(`INSERT INTO cart(user_id) VALUES(${userId})`,(e,result)=>{
+                      if(e) res.status(500).end();
+                      else res.redirect('login.html')
+                  });
+              }
  })
 });
 
@@ -104,15 +110,24 @@ app.post('/login' , (req , res)=>{
             let id = req.query.id;
             let token = req.cookies.token;
             con.query(`SELECT id FROM user WHERE token = '${token}'`,(e,result)=>{
-                if(e) res.send(e);
-                if(result){
+                if(e) res.status(500).end();
+                else{
+                    let userId = result[0].id;
                     con.query(`SELECT * FROM cart WHERE user_id ='${user.id}'`,(e,result)=>{
-                        if(e) res.send(e);
-                        if(result){
-                            console.log(id);
-                           /*  con.query('INSERT INTO cart_product(cart_id,product_id) VALUES ') */
+                        if(e) res.status(500).end();
+                        else {
+                            con.query(`INSERT INTO cart_product(cart_id,product_id) VALUES(${cartId}),${id})`,(e,result)=>{
+                                if(e) res.status(500).end();
+                                else {
+                                    res.status(201).redirect('/shop.html');
+                                }
+                                
+                            })
                         }
+                           
+                        
                     })
                 }
             })
         })
+
