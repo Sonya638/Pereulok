@@ -9,26 +9,7 @@
     <title>VTP</title>
     <link rel="canonical" href="https://getbootstrap.com/docs/5.1/examples/carousel/">
     <link rel="stylesheet" href="style.css">
-    <!-- Bootstrap core CSS -->
-<link href="../assets/dist/css/bootstrap.min.css" rel="stylesheet">
-    <style>
-      .bd-placeholder-img {
-        font-size: 1.125rem;
-        text-anchor: middle;
-        -webkit-user-select: none;
-        -moz-user-select: none;
-        user-select: none;
-        background-color: rgb(82, 79, 79);
-      }
-
-      @media (min-width: 768px) {
-        .bd-placeholder-img-lg {
-          font-size: 3.5rem;
-        }
-      }
-    </style> 
-    <!-- Custom styles for this template -->
-    <link href="carousel.css" rel="stylesheet">
+    
   </head>
   <body>
         <nav class="navbar navbar-light bg-dark">
@@ -75,14 +56,17 @@
               </button>
             <div  class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
               <div class="offcanvas-header">
-                <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Offcanvas</h5>
+                <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Menu</h5>
                 <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
               </div>
               <div class="offcanvas-body bg-dark">
                 <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
                   <div id="profile">
-                    <li><a class="nav-item" href="login.html" class="account ml-auto">Login</a></li>
-                    <li><a class="nav-item" href="register.html" class="account ml-auto">Register</a></li>
+                    <!-- <li><a class="nav-item" href="login.html" class="account ml-auto">Login</a></li> -->
+                    <h4> <b><a style="color: white; margin-right: 50px" class="nav-link" href="login.html" class="account ml-auto">Login</a></b></h4>
+                    <h4> <b><a style="color: white; margin-right: 50px" class="nav-link" href="register.html" class="account ml-auto">Register</a></b></h4>
+                    <h4> <b><a style="color: white; margin-right: 50px" class="nav-link" href="about.html" class="account ml-auto">About us</a></b></h4>
+                    <!-- <li><a class="nav-item" href="register.html" class="account ml-auto">Register</a></li> -->
                   </div>
                 </ul>
               </div>
@@ -92,133 +76,164 @@
     </header>
 <main>
 
-    <div id="myCarousel" class="carousel slide" data-bs-ride="carousel">
-      <!-- <div class="carousel-indicators">
-        <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-        <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
-        <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
-      </div> -->
-      <div class="carousel-inner">
-        
-        <div class="carousel-item active">
-          <svg class="bd-placeholder-img"  xmlns="http://www.w3.org/2000/svg" aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false"></svg>
-          <img class="bd-placeholder-img" src="3053.jpg" width="100%" height="100%">
-          <div class="container">
-            <div class="carousel-caption text-start">
+   
 
-            
-            
-            </div>
-          </div>
-        </div>
-        <div class="carousel-item">
-          <svg class="bd-placeholder-img" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false"></svg>
-          <img class="bd-placeholder-img" src="3103.jpg" width="100%" height="100%">
-          
-        </div>
-        <div class="carousel-item">
-          <svg class="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false"><rect width="100%" height="100%" fill="#777"/></svg>
-  
-          <div class="container">
-            <div class="carousel-caption text-end">
-              <h1>Suggestions for you</h1>
-              <p>Some representative placeholder content for the third slide of this carousel.</p>
-              <p><a class="btn btn-lg btn-primary" href="#">Browse gallery</a></p>
-            </div>
-          </div>
-        </div>
+
+
+
+<div class="content">
+
+  <div class = "top">
+    
+<img class="img_top1" src="/Pereulok/public/V TEMNOM PEREULKE.png">
+<img class="img_top2" src="/Pereulok/public/зукугдщл.jpg">
+
+  </div>
+
+
+  <div class="empty">
+
+  </div>
+
+  <nav class="navbar navbar-light bg-black">
+      <div class="container-fluid">
+        <a class="navbar-brand"><p class="best_sellers"><b>Best Sellers</b></p></a>
+        <form class="d-flex">
+          <button type="button" class="btn btn-outline-warning">View All</button>
+        </form>
       </div>
-      <button class="carousel-control-prev" type="button" data-bs-target="#myCarousel" data-bs-slide="prev">
-        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-        <span class="visually-hidden">Previous</span>
-      </button>
-      <button class="carousel-control-next" type="button" data-bs-target="#myCarousel" data-bs-slide="next">
-        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-        <span class="visually-hidden">Next</span>
-      </button>
+    </nav>
+      <div class="container1">
+
+
+          <div class="card text-white bg-black" >
+              <img src="/Pereulok/public/Organs/jaw.png" class="card-img-top" alt="...">
+              <div class="card-body">
+                <h4 class="card-title">Jaw</h4>
+                <p class="card-text">2 700$</p>
+                <a id="btn" href="#" class="d-grid gap-2 col-6 mx-auto" ><b>Buy</b></a>
+              </div>
+            </div>
+
+
+            <div class="card text-white bg-black" >
+                <img src="/Pereulok/public/Organs/arms.png" class="card-img-top" alt="...">
+                <div class="card-body bg-black;">
+                  <h5 class="card-title">Finger</h5>
+                  <p class="card-text">1 000$</p>
+                  <a id="btn" href="#" class="d-grid gap-2 col-6 mx-auto" ><b>Buy</b></a>                </div>
+              </div>
+
+              <div class="card text-white bg-black" >
+                  <img src="/Pereulok/public/Organs/heart.png" class="card-img-top" alt="...">
+                  <div class="card-body">
+                    <h5 class="card-title">Heart</h5>
+                    <p class="card-text">150 000 $</p>
+                    <a id="btn" href="#" class="d-grid gap-2 col-6 mx-auto" ><b>Buy</b></a>                  </div>
+                </div>
+
+                <div class="card text-white bg-black" >
+                    <img src="/Pereulok/public/Organs/eye.png" class="card-img-top" alt="...">
+                    <div class="card-body">
+                      <h5 class="card-title">Eye</h5>
+                      <p class="card-text">10 000 $</p>
+                      <a id="btn" href="#" class="d-grid gap-2 col-6 mx-auto" ><b>Buy</b></a>                    </div>
+                  </div>
+
+
+      </div>
+    
+    </div>
+    <div class="categories">
+        <p class="shop"><b>Shop by categories</b></p> 
+    </div>
+    <div class="all">
+  <div class="shop_category">
+    <div class="a"><img src="/Pereulok/public/Shop by category/all organs.png" class="img" alt="..."><br>       <h2 class="names">Organs</h2> </div>
+    <div class="b">  <img src="Shop by category\slave.png" class="img" alt="..."><br>      <h2 class="names">Slaves</h2></div>
+    <div class="c"><img src="/Pereulok/public/Shop by category/sets.png" class="img" alt="..."><br>          <h2 class="names">Sets</h2> </div>
+    
     </div>
 
+  </div>
 
-  <!-- Marketing messaging and featurettes
-  ================================================== -->
-  <!-- Wrap the rest of the page in another container to center all the content. -->
+  <div class="sales">
+      <img src="/Pereulok/public/super.png" alt="">
+  </div>
+  <div class="after_sales">
+   <p class="disckount_items best_sellers"><b>Discount items</b></p>
+    
+   <div class="container1">
 
+
+    <div class="card text-white bg-black" >
+        <img src="/Pereulok/public/Organs/skelet.png" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h4 class="card-title">Bones</h4>
+          <p class="card-text">3 000$</p>
+          <a id="btn" href="#" class="d-grid gap-2 col-6 mx-auto" ><b>Buy</b></a>
+        </div>
+      </div>
+
+
+      <div class="card text-white bg-black" >
+          <img src="/Pereulok/public/Organs/liver.png" class="card-img-top" alt="...">
+          <div class="card-body bg-black;">
+            <h5 class="card-title">Liver</h5>
+            <p class="card-text">100 000$</p>
+            <a id="btn" href="#" class="d-grid gap-2 col-6 mx-auto" ><b>Buy</b></a>                </div>
+        </div>
+
+        <div class="card text-white bg-black" >
+            <img src="/Pereulok/public/Organs/stomach.png" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Stomach</h5>
+              <p class="card-text">45 000$</p>
+              <a id="btn" href="#" class="d-grid gap-2 col-6 mx-auto" ><b>Buy</b></a>                  </div>
+          </div>
+
+          <div class="card text-white bg-black" >
+              <img src="/Pereulok/public/Organs/lungs.png" class="card-img-top" alt="...">
+              <div class="card-body">
+                <h5 class="card-title">Lungs</h5>
+                <p class="card-text">100 000$</p>
+                <a id="btn" href="#" class="d-grid gap-2 col-6 mx-auto" ><b>Buy</b></a>                    </div>
+            </div>
+
+
+</div>
  
-  <div class="container marketing">
-
-    <!-- Three columns of text below the carousel -->
-    <div class="row">
-      <div class="col-lg-4">
-        <img class="bd-placeholder-img rounded-circle" width="140" height="140" src="https://static.turbosquid.com/Preview/001283/134/PI/_600.jpg" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 140x140" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#777"/><text x="50%" y="50%" fill="#777" dy=".3em"></text></img>
-
-        <h2>Heart</h2>
-        <p>1 dey ago<br>New arrival</p>
-        <p><a class="btn btn-secondary" href="#">View details &raquo;</a></p>
-      </div><!-- /.col-lg-4 -->
-      <div class="col-lg-4">
-        <img class="bd-placeholder-img rounded-circle" width="140" height="140" src="https://static.turbosquid.com/Preview/001334/103/X9/_600.jpg" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 140x140" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#777"/><text x="50%" y="50%" fill="#777" dy=".3em"></text></img>
-
-        <h2>Eyes</h2>
-        <p>1 day ago<br>New arrival</p>
-        <p><a class="btn btn-secondary" href="#">View details &raquo;</a></p>
-      </div><!-- /.col-lg-4 -->
-      <div class="col-lg-4">
-        <img class="bd-placeholder-img rounded-circle" width="140" height="140" src="https://static.turbosquid.com/Preview/2019/10/17__10_26_23/HumanLiverandGallbladdervray3dmodel000.jpg2EFE73B8-E034-40B8-81BA-FA0EE321F7F4Large.jpg" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 140x140" preserveAspectRatio="xMidYMid slice" focusable="false"><title></title><rect width="100%" height="100%" fill="#777"/></img>
-
-        <h2>Liver</h2>
-        <p>3 days ago<br>New arrival</p>
-        <p><a class="btn btn-secondary" href="#">View details &raquo;</a></p>
-      </div>
-    </div>
+  </div>
 
 
 
-    <!-- START THE FEATURETTES -->
 
-    <hr class="featurette-divider">
 
-    <div class="row featurette">
-      <div style="color: white" class="col-md-7">
-        <h2 style="margin-bottom:30px" class="featurette-heading"><b>Lungs</b> <span class="text-muted"><p style="color: rgb(255, 67, 67); margin-top:20px">NEW delivery</p></span></h2>
-        <p class="lead">If, looking at our products, you are in the "herbs" section, thinking about its harm to the respiratory system, then This offer is especially for you. Lungs that are not familiar with the concept of "exhaust gases", which breathed only a fresh ocean breeze, throughout the life of the last owner, can now become yours, at a reduced price!</p>
-      </div>
-      <div class="col-md-5">
-        <img class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500" height="500" src="https://static.turbosquid.com/Preview/2020/03/19__21_42_37/Signature_View.jpg95F3B626-4A05-45B8-A5F1-DCFD45FBCB3DZoom.jpg" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 500x500" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#eee"/><text x="50%" y="50%" fill="#aaa" dy=".3em"></text></img>
 
-      </div>
-    </div>
 
-    <hr class="featurette-divider">
 
-    <div class="row featurette">
-      <div class="col-md-7 order-md-2">
-        <h2 class="featurette-heading"><div style="color: white">Jaw <span class="text-muted"><p style="color: rgb(255, 67, 67); margin-top:20px">NEW delivery</span></h2>
-        <p class="lead"><p style="color: white">It's no secret that our teeth have a very unpleasant tendency to wear off, crawl out of the gums, or even completely collapse. But this is not about our product, because these sharp teeth were brought directly from the elite morgue with which we cooperate! Teeth with veneers, teeth corrected with braces, or vice versa terribly crooked, can get to you in one click!</p>
-      </div>
-      <div class="col-md-5 order-md-1">
-        <img class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500" height="500" src="https://p.turbosquid.com/ts-thumb/2U/NxdPIK/wH/67.1/jpg/1637741876/1200x1200/fit_q99/8a9d0d2a1a5580149bd36cc70d8274ea6766e80e/67.1.jpg" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 500x500" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#eee"/><text x="50%" y="50%" fill="#aaa" dy=".3em"></text></img>
 
-      </div>
-    </div>
 
-    <hr class="featurette-divider">
 
-    <div class="row featurette">
-      <div class="col-md-7">
-        <h2 class="featurette-heading"><div style="color: white">Stomach <span class="text-muted"><p style="color: rgb(255, 67, 67); margin-top:20px">NEW delivery</span></h2>
-        <p class="lead"></div><p style="color: white">And yes, this is the last block of representative placeholder content. Again, not really intended to be actually read, simply here to give you a better view of what this would look like with some actual content. Your content.</p>
-      </div>
-      <div class="col-md-5">
-        <img class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500" height="500" src="https://static.turbosquid.com/Preview/2016/05/30__06_31_47/3.jpg667a9c66-b487-4087-8962-43234b22cb9eZoom.jpg" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 500x500" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#eee"/><text x="50%" y="50%" fill="#aaa" dy=".3em"></text></img>
 
-      </div>
-    </div>
 
-    <hr class="featurette-divider">
 
-    <!-- /END THE FEATURETTES -->
 
-  </div><!-- /.container -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 <!-- Footer -->
 <footer  class="page-footer font-small blue-grey lighten-5 bg-dark">
@@ -370,7 +385,8 @@
 
 
     <script src="../assets/dist/js/bootstrap.bundle.min.js"></script>
-
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r123/three.min.js"></script>
+<script src="https://cdn.rawgit.com/mrdoob/three.js/master/examples/js/loaders/GLTFLoader.js"></script>
 
 
     
@@ -379,4 +395,5 @@
   <script src="main.js" depend></script>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+
 </html>
