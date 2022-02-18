@@ -1,39 +1,27 @@
-<<<<<<< HEAD
-let cartRequest = new XMLHttpRequest();
-
-cartRequest.open('GET', '/cart/product');
-cartRequest.responseType = 'json'
-cartRequest.onload = () =>{
-  cartRequest.response.forEach(cp => {
-      modalElem.innerHTML += `
-      <p>Product name: ${cp.product.name}</p>
-      `
-  });
-}
-
-cartRequest.send();
-
-
-let modal = document.getElementById('modal');
-=======
 let cartRequest = new XMLHttpRequest()
 
 cartRequest.open('GET','/cart/products')
 cartRequest.responseType = 'json'
 cartRequest.onload = () => {
-    console.log(cartRequest.response);
+    modalElem.innerHTML = ''
     cartRequest.response.forEach(cp => {
         modalElem.innerHTML += `
-            <p>Product name: ${cp.product.name}</p>
+            <p>Product: ${cp.product.name} <a href='/remove-from-cart?id=${cp.id}' style="font-size: 2rem; text-decoration: none;">-</a></p>
         `
     });
+    modalElem.innerHTML +=`
+        <hr><hr>
+        <input type="tell" placeholder="Your phone number"></input>
+        <input type="text" placeholder="Your Name and Sirname"></input>
+        <input type="number" placeholder="NovaPoshta number"></input>
+        <button onclick="withdraw()">Buy All</button>
+    `
 }
 
 cartRequest.send()
 
 
 let modalElem = document.getElementById('modal');
->>>>>>> aafa86d7b809786dc30c63a8048a7c2f8fc288d3
 modalElem.style.display = 'none';
 function modal() {
     if(modalElem.style.display == 'none') {
@@ -42,8 +30,20 @@ function modal() {
     else {
         modalElem.style.display = 'none'
     }
-<<<<<<< HEAD
-  
-=======
->>>>>>> aafa86d7b809786dc30c63a8048a7c2f8fc288d3
+}
+
+
+function withdraw() {
+    let wr = new XMLHttpRequest();
+    wr.open('POST','/withdraw');
+
+    wr.onload = () => {
+        if(wr.status == 200) {
+            alert('Thank you for shopping! Your goods is on the way.');
+        }else {
+            alert('Your balance is low. Go to profile and top up it!');
+        }
+    }
+
+    wr.send();
 }
